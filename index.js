@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 // Route chính trả về lời chào
 app.get("/", (req, res) => {
-  res.send("Hello from Render!");
+  res.send("22dh114540 - Phạm Huy Hoàng");
 });
 
 // Khởi động server
