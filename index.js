@@ -82,7 +82,9 @@ app.get('/test-data', async (req, res) => {
     res.status(500).send('<h1>Database error</h1>');
   }
 });
-
+app.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello from Express API!' });
+});
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
