@@ -26,6 +26,18 @@ app.get('/time', async (req, res) => {
   }
 });
 
+// API lấy dữ liệu từ bảng test_table
+app.get('/test-data', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM test_table');
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Database error' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
